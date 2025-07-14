@@ -1,27 +1,40 @@
-// Espera a página carregar completamente antes de rodar o código
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
+    const botaoTema = document.getElementById('bot-tema');
+    const body = document.body;
 
-  // Pega o botão do menu (o botão com o ícone de três linhas)
-  const botao = document.getElementById('bot-menu');
-
-  // Pega o menu de navegação (os links: HOME, SOBRE, etc.)
-  const menu = document.getElementById('nav-menu');
-
-  // Adiciona um "ouvidor" de clique no botão
-  botao.addEventListener('click', function () {
-
-    // Verifica se o menu já está visível (aberto)
-    if (menu.style.display === 'block') {
-      // Se sim, esconde o menu
-      menu.style.display = 'none';
-    } else {
-      // Se não, mostra o menu
-      menu.style.display = 'block';
+    // Verifica o tema salvo
+    if (localStorage.getItem('tema') === 'dark') {
+        body.classList.add('dark-mode');
+        // Atualiza o ícone para sol se estiver no modo escuro
+        botaoTema.innerHTML = '<i class="bi bi-sun"></i>';
     }
 
-  });
+    botaoTema.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        
+        // Atualiza o ícone e salva a preferência
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('tema', 'dark');
+            botaoTema.innerHTML = '<i class="bi bi-sun"></i>';
+        } else {
+            localStorage.setItem('tema', 'light');
+            botaoTema.innerHTML = '<i class="bi bi-moon"></i>';
+        }
+    });
 
+    // Menu sanduíche (mantenha o código existente)
+    const hamburguerBtn = document.getElementById('hamburguer-btn');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburguerBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('nav-aberto');
+    });
 });
+
+
+
+
+
 
 
 

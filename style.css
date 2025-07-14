@@ -391,7 +391,7 @@ font-family: cursive;
 
 }
 .titulo  h2{
-  color: aliceblue;
+  color: blueviolet;
 }
 
 .card{
@@ -939,7 +939,7 @@ cursor: pointer;
 .portfolio-content p {
   font-size: 14px;
   margin-bottom: 15px;
-  color: black;
+  color: blueviolet;
   font-weight: 540;
 }
 
@@ -970,6 +970,206 @@ body.dark-mode h3{
 body.dark-mode p{
   color: aliceblue;
 }
+
+#hamburguer-btn {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+  font-size: 30px;
+  color: blueviolet;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  
+}
+
+
+@media (max-width: 768px) {
+  #hamburguer-btn {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+  }
+   .robo{
+    width: 350px;
+  }
+ 
+
+  .git{
+    background-color: aliceblue;
+  }
+  .espaco{
+    height: 10px;
+  }
+  #nav-menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.9);
+    flex-direction: column;
+    display: none;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 999;
+  }
+
+  #nav-menu ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #nav-menu a {
+    font-size: 18px;
+  }
+
+  #nav-menu.nav-aberto {
+    display: flex;
+  }
+
+  .menu {
+    justify-content: flex-end;
+  }
+}
+
+
+
+
+/* RESPONSIVIDADE PARA TELAS MÉDIAS E PEQUENAS */
+
+@media (max-width: 992px) {
+  .menu ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+   .robo{
+    width: 350px;
+  }
+  
+
+   .git{
+    background-color: aliceblue;
+  }
+
+  .sobre {
+    flex-direction: column;
+    text-align: center;
+  }
+  .espaco{
+    height: 10px;
+  }
+
+  .perfil {
+    margin-bottom: 20px;
+  }
+
+  #resumo {
+    width: 90%;
+    margin-left: 0;
+    font-size: 18px;
+  }
+
+  .download {
+    margin-right: 0;
+    justify-content: center;
+  }
+
+  .robo {
+    margin-left: 0;
+    width: 250px;
+  }
+
+  .linguagem img {
+    margin-left: 10px;
+    width: 40px;
+  }
+
+  .servicos {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card {
+    width: 90% !important;
+  }
+
+  .redes {
+    flex-direction: row;
+    margin-right: 35px;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+
+  .tema {
+    left: 90%;
+    top: 20px;
+  }
+
+  .redes-footer {
+    flex-direction: row;
+    justify-content: center;
+    position: static;
+    top: 0;
+    right: 0;
+    margin-top: 20px;
+  }
+
+  .menu-footer {
+    position: static;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rodape-container {
+    flex-direction: column;
+    height: auto;
+    padding: 30px 0;
+    gap: 20px;
+  }
+
+  .texto-rodape {
+    position: static;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .tema {
+    left: 85%;
+  }
+   .robo{
+    width: 350px;
+  }
+   .git{
+    background-color: aliceblue;
+  }
+  .espaco{
+    height: 10px;
+  }
+
+  .perfil img {
+    width: 150px;
+  }
+
+  .btn.btn-primary {
+    font-size: 14px;
+  }
+
+  .portfolio-grid {
+    padding: 0 10px;
+  }
+
+  .portfolio-item img {
+    height: 140px;
+  }
+}
+
+
 
 
 

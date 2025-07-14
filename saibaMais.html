@@ -34,21 +34,20 @@
 
 </header>
 <body>
-    <section class="menu">
-         
-            <nav id="nav-menu">
-                <ul>
-                    <li><a href="index.html"><i class="bi bi-house"></i>HOME</a></li>
-                    <li><a href="portifolio.html"><i class="bi bi-briefcase"></i>PORTIFÓLIO</a></li>
-                    <li><a href="contato.html"><i class="bi bi-envelope"></i>CONTATO</a></li>
-                </ul>
+   <section class="menu">
+  <button class="hamburguer" id="hamburguer-btn">
+    <i class="bi bi-list"></i>
+  </button>
 
-            </nav>
-            
-
-        
-
-    </section>
+  <nav id="nav-menu" class="nav-fechado">
+    <ul>
+      <li><a href="index.html"><i class="bi bi-house"></i>HOME</a></li>
+      <li><a href="#servico"><i class="bi bi-gear"></i>SERVIÇOS</a></li>
+      <li><a href="portifolio.html"><i class="bi bi-briefcase"></i>PORTIFÓLIO</a></li>
+      <li><a href="contato.html"><i class="bi bi-envelope"></i>CONTATO</a></li>
+    </ul>
+  </nav>
+</section>
      <section class="services-detail">
         <div class="container">
             <div class="servico-color">
@@ -157,26 +156,8 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>   
-<script>
-    const botaoTema = document.getElementById('bot-tema');
-    const body = document.body;
 
-    // Verifica se o dark mode estava ativado anteriormente
-    if (localStorage.getItem('tema') === 'dark') {
-        body.classList.add('dark-mode');
-    }
-
-    botaoTema.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-
-        // Salva a escolha no localStorage
-        if (body.classList.contains('dark-mode')) {
-            localStorage.setItem('tema', 'dark');
-        } else {
-            localStorage.setItem('tema', 'light');
-        }
-    });
-</script>
+<script src="menu.js"></script>
 
 </body>
 </html>
