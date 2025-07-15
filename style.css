@@ -73,7 +73,7 @@ body.dark-mode .card-body h5{
     color: blueviolet;
 }
 body.dark-mode .card-body p{
-    color: blueviolet;
+    color: aliceblue;
 }
 body.dark-mode .titulo h2{
   color: aliceblue;
@@ -939,7 +939,7 @@ cursor: pointer;
 .portfolio-content p {
   font-size: 14px;
   margin-bottom: 15px;
-  color: blueviolet;
+  color: aliceblue;
   font-weight: 540;
 }
 
